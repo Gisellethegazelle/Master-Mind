@@ -50,7 +50,7 @@ function checkGuess() {
   guess1 = parseInt(document.getElementById("guess1").value);
   guess2 = parseInt(document.getElementById("guess2").value);
   guess3 = parseInt(document.getElementById("guess3").value);
-
+  
   //  These three variables will be used to count correct numbers;
   //  number existing in the answer but in the wrong spot;
   //  or just plain wrong numbers.
@@ -193,9 +193,9 @@ function addGuessToPage(results) {
     the showGameResults function. Pass in the winner variable when you call the
     showGameResults function.
   */
-if(guessCount===10){
-  showGameResults(winner);
-}
+  if(guessCount===10){
+    showGameResults(winner);
+  }
 }
 
 function showGameResults(result) {
