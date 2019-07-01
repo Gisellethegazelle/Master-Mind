@@ -209,9 +209,10 @@ function showGameResults(result) {
     Losing code: gameResultElement.insertAdjacentHTML("beforeend", "<h2>Better luck next time!</h2>");
   */
 if(result === true){
- gameResultElement.insertAdjacentHTML("beforeend", "<h2>You broke the code!</h2>"); 
+  gameResultElement.insertAdjacentHTML("beforeend", "<h2>You broke the code!</h2>"); 
 }else{
- gameResultElement.insertAdjacentHTML("beforeend", "<h2>Better luck next time!</h2>"); 
+  gameResultElement.insertAdjacentHTML("beforeend", "<h2>Better luck next time!</h2>"); 
+}
 }
 
 function resetGame() {
