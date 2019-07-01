@@ -79,7 +79,7 @@ if (guess1 === answer[1]) {
     // if the 1st number in the  guess matches the 1st number in the answer,
     // add 1 to correctNumber
     correctNumber++;
-  } else if (answer.indexOf(guess1) >= 0) {
+  } else if (answer.indexOf(guess1) > 0) {
     // indexOf checks the answer array to see if 1st number is there
     // if the 1st number is in the answer, add 1 to presentNumber
     presentNumber++;
@@ -92,7 +92,7 @@ if (guess1 === answer[1]) {
     // if the 1st number in the  guess matches the 1st number in the answer,
     // add 1 to correctNumber
     correctNumber++;
-  } else if (answer.indexOf(guess2) >= 0) {
+  } else if (answer.indexOf(guess2) > 0) {
     // indexOf checks the answer array to see if 1st number is there
     // if the 1st number is in the answer, add 1 to presentNumber
     presentNumber++;
@@ -105,7 +105,7 @@ if (guess1 === answer[1]) {
     // if the 1st number in the  guess matches the 1st number in the answer,
     // add 1 to correctNumber
     correctNumber++;
-  } else if (answer.indexOf(guess3) >= 0) {
+  } else if (answer.indexOf(guess3) > 0) {
     // indexOf checks the answer array to see if 1st number is there
     // if the 1st number is in the answer, add 1 to presentNumber
     presentNumber++;
@@ -156,13 +156,17 @@ function checkResults(correct, present, wrong) {
     // case it runs the number of times specified by the "correct" variable.
     results += presentHTML.repeat(present);
   }
-  return results;
-}
+  
+
 if (wrong > 0) {
     // The repeat method adds the string the number of specified times. In this
     // case it runs the number of times specified by the "correct" variable.
     results += wrongHTML.repeat(wrong);
   }
+
+return results;
+}
+
 function addGuessToPage(results) {
   // This adds the guesses and the results to the page. ${results} is the HTML
   // that we built up in the checkResults function.
