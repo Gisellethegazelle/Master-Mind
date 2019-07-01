@@ -61,7 +61,7 @@ function checkGuess() {
   var presentNumber = 0;
   var wrongNumber = 0;
 
- if (guess0 === answer[0]) {
+ if (guess0 == answer[0]) {
     // if the 1st number in the  guess matches the 1st number in the answer,
     // add 1 to correctNumber
     correctNumber++;
