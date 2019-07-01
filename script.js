@@ -61,7 +61,7 @@ function checkGuess() {
   var presentNumber = 0;
   var wrongNumber = 0;
 
- if (guess0 == answer[0]) {
+  if (guess0 === answer[0]) {
     // if the 1st number in the  guess matches the 1st number in the answer,
     // add 1 to correctNumber
     correctNumber++;
@@ -75,7 +75,7 @@ function checkGuess() {
   }
 
   /* Write if/else if/else statements to check the remaining numbers. */
-if (guess1 === answer[1]) {
+  if (guess1 === answer[1]) {
     // if the 1st number in the  guess matches the 1st number in the answer,
     // add 1 to correctNumber
     correctNumber++;
@@ -158,13 +158,13 @@ function checkResults(correct, present, wrong) {
   }
   
 
-if (wrong > 0) {
+  if (wrong > 0) {
     // The repeat method adds the string the number of specified times. In this
     // case it runs the number of times specified by the "correct" variable.
     results += wrongHTML.repeat(wrong);
   }
 
-return results;
+  return results;
 }
 
 function addGuessToPage(results) {
@@ -208,11 +208,11 @@ function showGameResults(result) {
     Winning code: gameResultElement.insertAdjacentHTML("beforeend", "<h2>You broke the code!</h2>");
     Losing code: gameResultElement.insertAdjacentHTML("beforeend", "<h2>Better luck next time!</h2>");
   */
-if(result === true){
-  gameResultElement.insertAdjacentHTML("beforeend", "<h2>You broke the code!</h2>"); 
-}else{
-  gameResultElement.insertAdjacentHTML("beforeend", "<h2>Better luck next time!</h2>"); 
-}
+  if(result === true){
+    gameResultElement.insertAdjacentHTML("beforeend", "<h2>You broke the code!</h2>"); 
+  }else{
+    gameResultElement.insertAdjacentHTML("beforeend", "<h2>Better luck next time!</h2>"); 
+  }
 }
 
 function resetGame() {
